@@ -1,0 +1,430 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Texti Rodal Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .carousel-indicators li {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin: 8px;
+            text-indent: 0;
+            cursor: pointer;
+            border: none;
+            border-radius: 50%;
+            background-color: silver;
+            box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);    
+        }
+        .carousel-indicators .active {
+            width: 15px;
+            height: 15px;
+            margin: 8px;
+            background-color: silver;
+        }
+        .navbar {
+            margin-left: 0;
+            border-radius: 0;
+        }
+        .navbar-image {
+            padding-top: 5px;
+            padding-left: 5px;
+        }
+        /* Add a gray background color and some padding to the footer */
+        .footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+        }
+
+        .carousel-inner img {
+            width: 100%; /* Set width to 100% */
+            margin: auto;
+            min-height: 200px;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 10px;
+        }
+        .bg-grey {
+           background-color: #f6f6f6;
+        }
+        .container-fluid {
+           padding: 60px 50px;
+        }
+
+        .tittle {
+            font-size: 24px;
+            padding-left:50px;
+            text-transform: uppercase;
+            color: #303030;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .mission {
+            padding-top: 50px;
+            padding-left:50px;
+            font-size: 19px;
+            line-height: 1.375em;
+            color: #303030;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+        .vision {
+            padding-top: 50px;
+            padding-left:50px;
+            font-size: 16px;
+            line-height: 1.5em;
+            color: #808080;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+        /* Hide the carousel text when the screen is less than 600 pixels wide */
+        @media (max-width: 600px) {
+            .carousel-caption {
+                display: none;
+            }
+        }
+        .logo {
+        font-size: 200px;
+        }
+        @media screen and (max-width: 768px) {
+            .col-sm-4 {
+             text-align: center;
+              margin: 25px 0;
+        }
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img class="navbar-image" src="Imagenes/Image-Logo.png" alt="TextiRodal Logo">
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#myCarousel">Inicio</a></li>
+                    <li><a href="#about">Nosotros</a></li>
+                    <li><a href="#portafolio">Portafolio</a></li>
+                    <li><a href="#contactanos">Contáctanos</a></li>
+                    <li><a href="#googleMap">Ubicación</a></li>
+                    <li><a href="Views/DisplayPedido.aspx">Intranet</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="Imagenes/TextIRodal Street.jpg" />
+            </div>
+            <div class="item">
+                <img src="Imagenes/Logo street.jpg" />
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div id="about" class="container-fluid bg-grey">
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="Imagenes/textiRodal Machines.jpg" />
+            </div>
+            <div class="col-sm-8">
+                <h2 class="tittle">Nuestros Valores</h2>
+                <h4 class="mission"><strong>MISIÓN:</strong> Ofrecer diversos productos y servicios textiles de exelente calidad para
+                satisfacer las exigencias de nuestros clientes. Tambien estamos comprometidos con el desarrollo humano, el crecimiento
+                rentable y la proteccion ambiental.</h4>
+                <p class="vision"><strong>VISIÓN:</strong> Lograr solidez y crecimiento a nivel nacional e internacional apoyandonos
+                en la calidad, experiencia y en el exelente equipo humano con el que contamos.
+                Ademas mantener el liderazgo competitivo por medio de una gestion transparenete
+                creativa e innovadora logrando la fidelidad de clientes para ampliar y garantizar
+                el mercado, brindando soluciones textiles para la industria y el comercio.</p>
+            </div>
+        </div>
+    </div>
+    <div id="portafolio" class="container-fluid text-center bg-white">
+        <h2>Nuestro Portafolio</h2>
+        <h4>Esto es lo que ofrecemos</h4>
+        <div id="myCarousel1" class="carousel slide" data-ride="carousel">
+            <div class="col-sm-4">
+                <!-- Indicators -->
+                <ol class="carousel-indicators" style="padding-bottom:40px">
+                    <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel1" data-slide-to="1"></li>
+                </ol>
+                <div class="row text-center">
+                    <div class="thumbnail">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="Imagenes/Celtics Jersey.jpg" alt="Celtics Jersey">
+                                <p><strong>Uniformes Deportivos</strong></p>
+                                <p>Todo tipo de diseño a su conveniencia</p>
+                            </div>
+                            <div class="item">
+                                <img src="Imagenes/celtics shorts.jpg" alt="Celtics Shorts">
+                                <p><strong>Uniformes Deportivos</strong></p>
+                                <p>Todo tipo de diseño a su conveniencia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+            <div class="col-sm-4">
+                <!-- Indicators -->
+
+                <ol class="carousel-indicators" style="padding-bottom:40px">
+                    <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel2" data-slide-to="1"></li>
+                </ol>
+                <div class="row text-center">
+                    <div class="thumbnail">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="Imagenes/military jacket.jpg" alt="Military Jacket">
+                                <p><strong>Uniformes Militares</strong></p>
+                                <p>Tela camouflage de la mejor calidad</p>
+                            </div>
+                            <div class="item">
+                                <img src="Imagenes/military pants.jpg" alt="Military Pants">
+                                <p><strong>Uniformes Militares</strong></p>
+                                <p>Tela camouflage de la mejor calidad</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="myCarousel3" class="carousel slide" data-ride="carousel">
+
+            <div class="col-sm-4">
+                <!-- Indicators -->
+                <ol class="carousel-indicators" style="padding-bottom:40px">
+                    <li data-target="#myCarousel3" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel3" data-slide-to="1"></li>
+                </ol>
+                <div class="row text-center">
+                    <div class="thumbnail">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="Imagenes/Fashion Clothing 1.jpg" alt="Fahion Clothes">
+                                <p><strong>Prendas a la moda</strong></p>
+                                <p>La mejor ropa de diseñador</p>
+                            </div>
+                            <div class="item">
+                                <img src="Imagenes/Fashion Clothing.jpg" alt="Fashion Clothes">
+                                <p><strong>Prendas a la moda</strong></p>
+                                <p>La mejor ropa de diseñador</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="myCarousel4" class="carousel slide" data-ride="carousel">
+            <div class="col-sm-4">
+                <!-- Indicators -->
+                <ol class="carousel-indicators" style="padding-bottom:40px">
+                    <li data-target="#myCarousel4" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel4" data-slide-to="1"></li>
+                </ol>
+                <div class="row text-center">
+                    <div class="thumbnail">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="Imagenes/Celtics Jersey.jpg" alt="Celtics Jersey">
+                                <p><strong>Uniformes Deportivos</strong></p>
+                                <p>Todo tipo de diseño a su conveniencia</p>
+                            </div>
+                            <div class="item">
+                                <img src="Imagenes/celtics shorts.jpg" alt="Celtics Shorts">
+                                <p><strong>Uniformes Deportivos</strong></p>
+                                <p>Todo tipo de diseño a su conveniencia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="myCarousel5" class="carousel slide" data-ride="carousel">
+            <div class="col-sm-4">
+                <!-- Indicators -->
+
+                <ol class="carousel-indicators" style="padding-bottom:40px">
+                    <li data-target="#myCarousel5" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel5" data-slide-to="1"></li>
+                </ol>
+                <div class="row text-center">
+                    <div class="thumbnail">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="Imagenes/military jacket.jpg" alt="Military Jacket">
+                                <p><strong>Uniformes Militares</strong></p>
+                                <p>Tela camouflage de la mejor calidad</p>
+                            </div>
+                            <div class="item">
+                                <img src="Imagenes/military pants.jpg" alt="Military Pants">
+                                <p><strong>Uniformes Militares</strong></p>
+                                <p>Tela camouflage de la mejor calidad</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="myCarousel6" class="carousel slide" data-ride="carousel">
+
+            <div class="col-sm-4">
+                <!-- Indicators -->
+                <ol class="carousel-indicators" style="padding-bottom:40px">
+                    <li data-target="#myCarousel6" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel6" data-slide-to="1"></li>
+                </ol>
+                <div class="row text-center">
+                    <div class="thumbnail">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="Imagenes/Fashion Clothing 1.jpg" alt="Fahion Clothes">
+                                <p><strong>Prendas a la moda</strong></p>
+                                <p>La mejor ropa de diseñador</p>
+                            </div>
+                            <div class="item">
+                                <img src="Imagenes/Fashion Clothing.jpg" alt="Fashion Clothes">
+                                <p><strong>Prendas a la moda</strong></p>
+                                <p>La mejor ropa de diseñador</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                <div id="contactanos" class="container-fluid bg-grey">
+                    <h2 class="text-center">CONTÁCTANOS</h2>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <p>Contáctanos si encontraste algo que necesitas y nos comunicaremos contigo dentro de 24 horas</p>
+                            <p><span class="glyphicon glyphicon-map-marker"></span> Atuntaqui, EC</p>
+                            <p><span class="glyphicon glyphicon-phone"></span> + 593 999668950</p>
+                            <p><span class="glyphicon glyphicon-envelope"></span> textirodal@gmail.com</p>
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="row">
+                                <div class="col-sm-6 form-group">
+                                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                                </div>
+                                <div class="col-sm-6 form-group">
+                                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                                </div>
+                            </div>
+                            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+                            <div class="row">
+                                <div class="col-sm-12 form-group">
+                                    <button class="btn btn-default pull-right" type="submit">Send</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    <div id="googleMap" style="height:400px;width:100%;"></div>
+    <script>
+        function myMap() {
+            var myCenter = new google.maps.LatLng(0.333572, -78.220611);
+            var mapProp = { center: myCenter, zoom: 16, scrollwheel: false, draggable: false, mapTypeId: google.maps.MapTypeId.ROADMAP };
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+            var marker = new google.maps.Marker({ position: myCenter });
+            marker.setMap(map);
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_5qVTRFj839ihfsXwBLAul4bDWDgkn5o&callback=myMap"
+            type="text/javascript"></script>
+
+    <footer class="container-fluid text-center" style="background-color:white;">
+        <div class="col-sm-4">
+            <p><a href="#myCarousel">Inicio</a></p>
+            <p><a href="#about">Nosotros</a></p>
+
+        </div>
+        <div class="col-sm-4">
+            <p><a href="#portafolio">Portafolio</a></p>
+            <p><a href="#contactanos">Contáctanos</a></p>
+        </div>
+        <div class="col-sm-4">
+            <p><a href="#googleMap">Ubicanos</a></p>
+        </div>
+
+    </footer>
+    <div style="background-color:lightgray">
+        <div class="container-fluid text-center">
+            <p><span class="glyphicon glyphicon-copyright-mark"></span> Desarrollado por Steven Vallejo</p>
+        </div>
+    </div>
+    <script>
+            $(document).ready(function(){
+              // Add smooth scrolling to all links in navbar + footer link
+              $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+               // Make sure this.hash has a value before overriding default behavior
+              if (this.hash !== "") {
+
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                  scrollTop: $(hash).offset().top
+                }, 900, function(){
+
+                  // Add hash (#) to URL when done scrolling (default click behavior)
+                  window.location.hash = hash;
+                  });
+                } // End if
+              });
+            })
+    </script>
+</body>
+</html>
