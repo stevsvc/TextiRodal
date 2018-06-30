@@ -28,7 +28,7 @@ namespace DisplayTableOriginal.Views
             SqlConnection con = new SqlConnection();
             SqlDataReader reader;
 
-            con.ConnectionString = @"Data Source=186.101.103.197; Initial Catalog=pedidos_rodal;User ID=rodal;Password=Mishell2017;";
+            con.ConnectionString = @"Data Source=...; Initial Catalog=...;User ID=...;Password=...;";
             SqlCommand cmd = new SqlCommand("SELECT * FROM Adm_Ciudades", con);
             con.Open();
             reader = cmd.ExecuteReader();
