@@ -40,10 +40,8 @@
                 <asp:Label ID="VerificacionName" runat="server" Text="Nombre: "></asp:Label>
                 <asp:TextBox ID="TxtName" runat="server"></asp:TextBox>
                 <br />
-                <br />
                 <asp:Label ID="VerificationLastName" runat="server" Text="Apellido: "></asp:Label>
                 <asp:TextBox ID="TxtLastName" runat="server"></asp:TextBox>
-                <br />
                 <br />
                 <asp:Button ID="VerificationButton" runat="server" Text="Verificar" OnClick="VerificationButton_Click" />
             </asp:PlaceHolder>
@@ -63,14 +61,11 @@
                 <asp:Label ID="UserNameLabel" runat="server" Text="Usuario: "></asp:Label>
                 <asp:TextBox ID="TxtUserName" runat="server"></asp:TextBox>
                 <br />
-                <br />
                 <asp:Label ID="PasswordLabel" runat="server" Text="Contraseña: "></asp:Label>
                 <asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox>
                 <br />
-                <br />
                 <asp:Label ID="ConfirmPsswrd" runat="server" Text="Confirmar Contraseña: "></asp:Label>
                 <asp:TextBox ID="ConfirmPassword" runat="server" TextMode="Password"></asp:TextBox>
-                <br />
                 <br />
                 <asp:Literal ID="FailureText" runat="server" EnableViewState="False"></asp:Literal>
                 <asp:Button ID="RegisterButton" runat="server" CommandName="Register" Text="Register" OnClick="RegisterButton_Click" />

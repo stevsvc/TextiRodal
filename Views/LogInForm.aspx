@@ -38,10 +38,8 @@
             <asp:Label ID="PasswordLabel" runat="server" Text="Contraseña: "></asp:Label>
             <asp:TextBox ID="TxtPassword" runat="server" TextMode="Password"></asp:TextBox>
             <br />
-            <br />
             <asp:CheckBox ID="RememberMe" runat="server" Text="Recuerdame." />
             <asp:Literal ID="FailureText" runat="server" EnableViewState="False"></asp:Literal>
-            <br />
             <br />
             <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Iniciar Sesión" ValidationGroup="Login" OnClick="LoginButton_Click" />
         </div>
