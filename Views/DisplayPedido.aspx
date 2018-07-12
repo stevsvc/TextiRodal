@@ -93,7 +93,7 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="../TextiRodal.html">Inicio</a></li>
-                    <li><a href="Views/DisplayPedido.aspx">Intranet</a></li>
+                    <li><a href="LogInForm.aspx">Cerrar Sesión</a></li>
                 </ul>
             </div>
         </div>

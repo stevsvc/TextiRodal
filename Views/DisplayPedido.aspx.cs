@@ -17,7 +17,7 @@ namespace DisplayTableOriginal.Views
             SqlConnection con = new SqlConnection();
             SqlDataReader reader;
 
-            con.ConnectionString = @"Data Source=186.101.103.197; Initial Catalog=pedidos_rodal;User ID=rodal;Password=Mishell2017;";
+            con.ConnectionString = @"Data Source=186.101.103.197; Initial Catalog= pedidos_rodal;User ID=rodal;Password=Mishell2017;";
             SqlCommand cmd = new SqlCommand("Pedidos_Ordenado_Sam", con);
             cmd.Parameters.Add(new SqlParameter("Fecha_Inicial", Convert.ToDateTime(string.IsNullOrEmpty(TextBox1.Text) ? DateTime.Now : Convert.ToDateTime(TextBox1.Text))));
             cmd.Parameters.Add(new SqlParameter("Fecha_Final", Convert.ToDateTime(string.IsNullOrEmpty(TextBox2.Text) ? DateTime.Now : Convert.ToDateTime(TextBox2.Text))));
@@ -39,12 +39,7 @@ namespace DisplayTableOriginal.Views
                 pedidoTotal_Sam_Total += pedido.Sam_Total;
                 listaPedidos.Add(pedido);
             }
-            //reader.NextResult();
 
-            //while (reader.Read())
-            //{
-            
-            //}
             con.Close();
             GrdPedidos.DataSource = listaPedidos;
             GrdPedidos.DataBind();
