@@ -17,11 +17,7 @@ namespace DisplayTableOriginal.Views
             SqlConnection con = new SqlConnection();
             SqlDataReader reader;
 
-<<<<<<< HEAD
-            con.ConnectionString = @"Data Source=186.101.103.197; Initial Catalog= pedidos_rodal;User ID=rodal;Password=Mishell2017;";
-=======
             con.ConnectionString = @"Data Source=...; Initial Catalog=...;User ID=...;Password=...;";
->>>>>>> 18878a6967b2a1ca98dd691271a43b565487d429
             SqlCommand cmd = new SqlCommand("Pedidos_Ordenado_Sam", con);
             cmd.Parameters.Add(new SqlParameter("Fecha_Inicial", Convert.ToDateTime(string.IsNullOrEmpty(TextBox1.Text) ? DateTime.Now : Convert.ToDateTime(TextBox1.Text))));
             cmd.Parameters.Add(new SqlParameter("Fecha_Final", Convert.ToDateTime(string.IsNullOrEmpty(TextBox2.Text) ? DateTime.Now : Convert.ToDateTime(TextBox2.Text))));
