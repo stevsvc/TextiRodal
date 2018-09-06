@@ -11,7 +11,7 @@ namespace DisplayTableOriginal.Views
         {
             SqlConnection connection = new SqlConnection();
 
-            connection.ConnectionString = @"Data Source=186.101.103.197; Initial Catalog= pedidos_rodal;User ID=rodal;Password=Mishell2017;";
+            connection.ConnectionString = @"Data Source=...; Initial Catalog= ...;User ID=...;Password=...;";
             if (TxtUserName.Text != "" && Password.Text != "" && ConfirmPassword.Text != "")
             {
                 if (Password.Text.ToString().Trim().ToLower() == ConfirmPassword.Text.ToString().Trim().ToLower())
@@ -40,7 +40,7 @@ namespace DisplayTableOriginal.Views
         {
             SqlConnection connection = new SqlConnection();
 
-            connection.ConnectionString = @"Data Source=186.101.103.197; Initial Catalog= pedidos_rodal;User ID=rodal;Password=Mishell2017;";
+            connection.ConnectionString = @"Data Source=...; Initial Catalog= ...;User ID=...;Password=...;";
 
             string Name = TxtName.Text;
             string LastName = TxtLastName.Text;
