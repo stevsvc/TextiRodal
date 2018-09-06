@@ -19,7 +19,7 @@ namespace DisplayTableOriginal.Views
             SqlDataReader reader;
             string Password = "";
             bool IsExist = false;
-            connection.ConnectionString = @"Data Source=186.101.103.197; Initial Catalog= pedidos_rodal;User ID=rodal;Password=Mishell2017;";
+            connection.ConnectionString = @"Data Source=...; Initial Catalog= ...;User ID=...;Password=...;";
             connection.Open();
             SqlCommand cmd = new SqlCommand("SELECT Password FROM Usuarios WHERE Usuarios = '" + TxtUserName.Text + "'", connection);
             reader = cmd.ExecuteReader();
